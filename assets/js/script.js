@@ -1,36 +1,38 @@
-// RULES
-let rules = {
-    green: {
-        num: 100,
-        green: Math.random() * 2 - 1,
-        red: Math.random() * 2 - 1,
-        yellow: Math.random() * 2 - 1,
-        blue: Math.random() * 2 - 1,
-    },
-    red: {
-        num: 100,
-        green: Math.random() * 2 - 1,
-        red: Math.random() * 2 - 1,
-        yellow: Math.random() * 2 - 1,
-        blue: Math.random() * 2 - 1,
-    },
-    yellow: {
-        num: 100,
-        green: Math.random() * 2 - 1,
-        red: Math.random() * 2 - 1,
-        yellow: Math.random() * 2 - 1,
-        blue: Math.random() * 2 - 1,
-    },
-    blue: {
-        num: 100,
-        green: Math.random() * 2 - 1,
-        red: Math.random() * 2 - 1,
-        yellow: Math.random() * 2 - 1,
-        blue: Math.random() * 2 - 1,
-    },
+let rules
+
+function loadRules() {
+    rules = {
+        green: {
+            num: 100,
+            green: Math.random() * 2 - 1,
+            red: Math.random() * 2 - 1,
+            yellow: Math.random() * 2 - 1,
+            blue: Math.random() * 2 - 1,
+        },
+        red: {
+            num: 100,
+            green: Math.random() * 2 - 1,
+            red: Math.random() * 2 - 1,
+            yellow: Math.random() * 2 - 1,
+            blue: Math.random() * 2 - 1,
+        },
+        yellow: {
+            num: 100,
+            green: Math.random() * 2 - 1,
+            red: Math.random() * 2 - 1,
+            yellow: Math.random() * 2 - 1,
+            blue: Math.random() * 2 - 1,
+        },
+        blue: {
+            num: 100,
+            green: Math.random() * 2 - 1,
+            red: Math.random() * 2 - 1,
+            yellow: Math.random() * 2 - 1,
+            blue: Math.random() * 2 - 1,
+        },
+    }
 }
 
-// CANVAS
 const canvas = document.querySelector('canvas')
 const canvasWidth = canvas.width
 const ctx = canvas.getContext('2d')
@@ -117,5 +119,8 @@ function newFrame() {
     requestAnimationFrame(newFrame)
 }
 
+loadRules()
 for (rule of Object.entries(rules)) createAtom(rule[1].num, rule[0])
 newFrame()
+
+document.addEventListener('keydown', e => {if (e.key == ' ') loadRules()})
