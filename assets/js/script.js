@@ -1,5 +1,5 @@
 // RULES
-const rules = {
+let rules = {
     green: {
         num: 100,
         green: Math.random() * 2 - 1,
@@ -36,7 +36,7 @@ const canvasWidth = canvas.width
 const ctx = canvas.getContext('2d')
 
 const atoms = []
-const atomSize = 5
+const atomSize = 3
 const ray = 180
 
 function draw(x, y, color, size) {
