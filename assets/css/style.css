@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+    background-color: black;
+}
+
+canvas {
+    box-sizing: border-box;
+    border: outset 1px white;
+
+    aspect-ratio: 1;
+    max-width: 600px;
+    width: 80vw;
+}
