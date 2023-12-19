@@ -7,7 +7,7 @@
 
   #### [Try it][pages]
 
-  <img src='./assets/img/atoms.gif' width='400'>
+  <img src='https://github.com/alaanvv/Image-Database/blob/main/Misc/atoms.gif?raw=true' width='400'>
 </div>
 
-[pages]: https://alaanvv.github.io/Atoms-Playground/
+[pages]: https://alaanvv.github.io/Web-Atoms-Playground/
